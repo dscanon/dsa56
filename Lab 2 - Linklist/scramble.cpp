@@ -31,10 +31,10 @@ public:
 		size++;
 	}
 	void rotate(int n){
-		/*while(n>=100){
-		cout<<"Rotate percent :";
-		cin>>n;
-		}*/
+		while(n>=100){
+			cout<<"Rotate percent :";
+			cin>>n;
+		}
 		int no=(int)(n*size/100.0);
 		rot=n;
 		cout<<"R"<<no<<endl;
@@ -53,10 +53,10 @@ public:
 	}
 
 	void shuffle(int n){
-		/*while(n>=100){
-		cout<<"Shuffle percent :";
-		cin>>n;
-		}*/
+		while(n>=100){
+			cout<<"Shuffle percent :";
+			cin>>n;
+		}
 		int no=(int)(n*size/100.0);
 		shu=no;
 		cout<<"R"<<no<<endl;
@@ -66,10 +66,6 @@ public:
 		head2=head2->next;
 		node *headTmp=head;
 		node *tmp=head->next,*tmp2=head2->next;
-		/*cout<<"H \t"<<head->data<<endl;
-		cout<<"T \t"<<tail->data<<endl;
-		cout<<"H2 \t"<<head2->data<<endl;
-		cout<<"T2 \t"<<tail2->data<<endl;*/
 		for(int i=1;(i<=size-no)&&(i<=no);i++){
 			head->next=head2;
 			if(head==tail){
@@ -113,6 +109,8 @@ public:
 		}
 		head=headtmp;
 		shu=0;
+		tail=head;
+		while(tail->next!=NULL){tail=tail->next;}
 		print();
 	}
 	void print(){
@@ -148,10 +146,10 @@ int main(){
 	cout<<"Shuffle percent : ";
 	cin>>percent;
 	s1.shuffle(percent);
-	
+
 	cout<<"DECODE"<<endl;
 	s1.shuffle2();     
 	s1.rotate2();
-	
+
 	return 0;
 }
