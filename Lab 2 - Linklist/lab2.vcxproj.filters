@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="scramble.cpp">
+    <ClCompile Include="scrambleKO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
