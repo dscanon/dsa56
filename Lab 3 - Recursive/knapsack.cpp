@@ -7,6 +7,7 @@ void sack(int *price,int money,int start,int end,int sum,int n){
 		for(int i=start;i<end;i++){
 			list[n]=price[i];
 			sack(price,money,i+1,end,sum+price[i],n+1);
+			list[n]=0; 
 		}
 	}
 	else if(sum==20){
@@ -16,11 +17,6 @@ void sack(int *price,int money,int start,int end,int sum,int n){
 		}
 		cout<<endl;
 	}
-	else{
-		list[n]=0;
-	}
-
-
 }
 
 
